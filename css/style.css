@@ -675,8 +675,13 @@ a.btn-icons-log.icons-svg-style {
     .z-2 {
         z-index: 0 !important;
     }
+
     .navbar .logo img {
         width: 130px;
+    }
+    
+    .navbar.login-page .logo img {
+        width: 160px;
     }
     
     .navbar a.btn-log-in,
