@@ -51,6 +51,9 @@ h1,h2,h3,h4,h5,h6,a {
     width: 200px;
     height: auto;
 }
+.navbar.login-page a {
+    margin: 0;    
+}
 
 .navbar .navbar-nav li {
     margin-left: 16px;
@@ -836,7 +839,7 @@ a.btn-icons-log.icons-svg-style {
         margin-bottom: 0;
         padding-left: 12px;
         padding-right: 12px;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         border-radius: 36px 36px 0 0;
     }
     .resolution .dropdown-list {
