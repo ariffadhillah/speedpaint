@@ -23,6 +23,7 @@ body {
     transition: .2s;
     border-color: none;
 }
+.text-16,
 .btn-login-email,
 .btnpurle,
 .btndark,
@@ -1090,4 +1091,85 @@ input:focus-visible {
     width: 30px;
     height: 30px;
     background-color: #1F1F1F;
+}
+
+
+
+.footer-main {
+    background-image: url(../image/footer_bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: center; */    
+    width: 100%;
+    height: 100%;
+}
+.footer-top{
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.menu-item-footer li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    transition: .5s;
+}
+
+.menu-item-footer li::marker {
+    color: #fff;
+}
+
+.menu-item-footer li a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.text-16 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.menu-items-icons a {
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(90deg, #1f1f1f, #060606);
+    padding: 14px 29px;
+    transition: .5s;
+}
+.menu-items-icons a.twitter {
+    border-right: .5px solid #424242;
+    border-left: .5px solid #424242;
+    border-top: .5px solid #424242;
+    border-bottom: .5px solid #424242;
+    border-radius: 24px 24px 0 0;
+    
+}
+.menu-items-icons a.discord {
+    border-right: .5px solid #424242;
+    border-left: .5px solid #424242;
+    border-bottom: .5px solid #424242;
+    border-radius: 0 0 0 24px;
+
+}
+
+.icons-footer {
+    margin-right: 10px;
+}
+
+.icon-footer {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    transition: 0;
+}
+
+.menu-items-icons a:hover {
+    background: #ffffff;
+    color: #1F1F1F;
+}
+.menu-items-icons a:hover .icon-footer {
+    fill: #1F1F1F;
 }
