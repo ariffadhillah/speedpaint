@@ -670,6 +670,14 @@ a.btn-icons-log.icons-svg-style {
 }
 
 @media (max-width: 992px) {
+    .footer-top{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .menu-items-icons {
+        margin-right: -16px;
+    }
+    
     .card-speed-paint {
         width: auto;
     }
@@ -687,6 +695,26 @@ a.btn-icons-log.icons-svg-style {
 
 }
 @media (min-width: 992px) {
+    .footer-top{
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
+    
+    .menu-items-icons a.twitter {
+        border-radius: 24px 24px 0 0;        
+    }
+    .menu-items-icons a.discord {     
+        border-radius: 0 0 0 24px;    
+    }
+    .icon-footer {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .menu-items-icons a {
+        font-size: 18px;
+        padding: 14px 29px;
+    }
     .card-speed-paint {
         width: 560px;
     }
@@ -702,9 +730,37 @@ a.btn-icons-log.icons-svg-style {
     .btn-login-email {
         font-size: 18px;
     }
+    .menu-item-footer li a {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 768px) {
+    .menu-items-icons a.twitter {
+        border-radius: 18px 18px 0 0;        
+    }
+    .menu-items-icons a.discord {     
+        border-radius: 0 0 0 17px;    
+    }
+    .icon-footer {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .menu-items-icons a {
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+    .menu-item-footer li a {
+        font-size: 16px;
+    }
+    
+    .menu-item-footer ul {
+        padding-left: 0;
+    }
+    .menu-item-footer ul li {
+        list-style: none;
+    }
     .btn-login-email,
     .btnpurle {
         font-size: 16px;
@@ -1125,16 +1181,11 @@ input:focus-visible {
     width: 100%;
     height: 100%;
 }
-.footer-top{
-    padding-top: 95px;
-    padding-bottom: 95px;
-}
 
 .menu-item-footer li a {
     display: block;
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
     font-weight: 300;
     transition: .5s;
 }
@@ -1154,26 +1205,20 @@ input:focus-visible {
 }
 
 .menu-items-icons a {
-    font-size: 18px;
     color: #fff;
     background: linear-gradient(90deg, #1f1f1f, #060606);
-    padding: 14px 29px;
     transition: .5s;
 }
 .menu-items-icons a.twitter {
     border-right: .5px solid #424242;
     border-left: .5px solid #424242;
     border-top: .5px solid #424242;
-    border-bottom: .5px solid #424242;
-    border-radius: 24px 24px 0 0;
-    
+    border-bottom: .5px solid #424242;    
 }
 .menu-items-icons a.discord {
     border-right: .5px solid #424242;
     border-left: .5px solid #424242;
     border-bottom: .5px solid #424242;
-    border-radius: 0 0 0 24px;
-
 }
 
 .icons-footer {
@@ -1182,10 +1227,8 @@ input:focus-visible {
 
 .icon-footer {
     fill: #fff;
-    width: 20px;
-    height: 20px;
     margin-top: -3px;
-    transition: 0;
+    transition: .1s;
 }
 
 .menu-items-icons a:hover {
