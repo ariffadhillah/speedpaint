@@ -24,12 +24,72 @@
         </div>
       </nav>
 
-      <section class="page-profile">
+      <section class="page-profile pb-3">
         <div class="container">
-            <div class="row">
-                <div class="col-6"><h4>Details</h4></div>
-                <div class="col-6  text-end"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button></div>
+            <div class="row border-bottom-gray-600 pt-5  d-flex align-items-center">
+                <div class="col-6 px-0 mt-4">
+                  <div class="details mb-2">
+                    <h4 class="text-white mb-0">Details</h4>
+                  </div>
+                </div>
+                <div class="col-6 px-0 mt-4 text-end">
+                  <div class="details mb-4 pb-1">
+                    <button type="button" class="btn btn-pop-up" data-bs-toggle="modal" data-bs-target="#editPopup">Edit</button>
+                  </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-12 px-0 mt-4">
+                  <div class="details mb-2">
+                    <p class="text-gray-500 font-size-18 mb-3">Email:<span class="text-white m-left-5">jontravolta@gmail.com</span></p>
+                    <p class="text-gray-500 font-size-18">Password:<span class="text-white m-left-5">********</span></p>
+                  </div>
+                </div>
+            </div>
+            <div class="row border-bottom-gray-600 pt-2 d-flex align-items-center">
+                <div class="col-6 px-0 mt-4">
+                  <div class="details mb-2">
+                    <h4 class="text-white mb-0">Plans</h4>
+                  </div>
+                </div>
+                <div class="col-6 px-0 mt-4 text-end">
+                  <div class="details mb-4 pb-1">
+                    <button type="button" class="btn btn-pop-up" data-bs-toggle="modal" data-bs-target="#unSubscribePopup">Unsubscribe</button>
+                  </div>
+                </div>
+            </div>
+          <div class="row mt-2 pb-5">
+            <div class="col-12 col-lg-6 px-xl-0 px-lg-0 px-md-0 px-sm-3 px-3">
+              <div class="card card-speed-paint mt-4 mb-3">
+                <div class="card-header d-flex justify-content-between p-0">
+                  <div class="card-price">
+                    <h6>PREMIUM SpeedPaint</h6>
+                    <h1 class="mt-4 pt-2">$9<span>/monthly</span></h1>
+                  </div>
+                  <div class="card-remaining">
+                    <div class="remaining">
+                      <div class="date d-flex align-items-center">
+                        <div class="data-icons">
+                          <img src="image/date.png" alt="">
+                        </div>
+                        <p class="m-0 text-white weight-600">19/11/2024</p>
+                      </div>
+                      <p class="text-white pt-2"><span class="weight-400 text-gray-500 m-right-10">Remaining:</span><span>1/12</span></p> 
+                    </div>                  
+                  </div>
+                </div>
+                <div class="card-body p-0 mt-2">
+                   <p class="text-gray-500 mb-4">Ideal for individuals and teams seeking HD image to speed drawing video conversion.</p>
+                   <ul class="mb-0">
+                    <li class="pt-2 text-white d-flex align-items-center"><img src="image/checklist-icons.png" alt="">Unlimited Credits</li>
+                    <li class="text-white d-flex align-items-center"><img src="image/checklist-icons.png" alt="">HD Quality - 1920 * 1080</li>
+                    <li class="text-white d-flex align-items-center"><img src="image/checklist-icons.png" alt="">Up to 2 min video duration</li>
+                    <li class="text-white d-flex align-items-center"><img src="image/checklist-icons.png" alt="">Cancel Anytime</li>
+                   </ul>
+                </div>
+              </div>
+            </div>
+        </div>
         </div>
       </section>
 
@@ -76,24 +136,68 @@
 
 
 <!-- Pop up -->
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- pop  Edit-->
+<div class="modal pop-up-width fade" id="editPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editPopupLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content p-3">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title">Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </button>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+        <div class="modal-body pt-1">
+          <form class="row">
+            <div class="col-12">
+              <label class="form-label">Email*</label>
+              <input type="email" class="d-block bg-black-900" placeholder="Type here" required>
+            </div>
+            <div class="col-12 mt-3">
+              <label class="form-label">Password*</label>
+              <input type="password" class="d-block bg-black-900" placeholder="Type here"  required>
+            </div>
+            <div class="col-12 mt-4">
+              <label class="form-label">Repeat password*</label>
+              <input type="password" class="d-block bg-black-900" placeholder="Type here"  required>
+            </div>
+            <div class="col-12 mt-4 mt-xl-4 mt-lg-4 mt-md-3 mt-sm-4">
+              <button class="btn btnpurle" type="submit">Save</button>
+            </div>
+          </form> 
         </div>
       </div>
     </div>
   </div>
+<!-- end -->
+
+<!-- Pop up Unsubscribe -->
+
+<div class="modal pop-up-width fade" id="unSubscribePopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="unSubscribePopupLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h1 class="modal-title">Plan Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </div>
+      <div class="modal-body pt-1">
+        <p class="weight-400 text-gray-500">Are you sure you want to unsubscribe from the plan? The service will stop charging.</p>
+      </div>
+      <div class="modal-footer pt-1">
+        <button type="button" class="btn btnpurle close px-3 py-2 m-right-10" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btnpurle px-4 py-2 m-left-10">Yes, unsubscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- end -->
 
     <script src="js/bootstrap.bundle.min.js"></script>

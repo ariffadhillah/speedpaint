@@ -1,16 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
     background-color: #0a0a0a;
 }
-
-
+.font-size-18 {
+    font-size: 18px;
+}
+.m-right-10 {
+    margin-right: 10px;
+}
+.m-left-10 {
+    margin-left: 10px;
+}
+.m-left-5 {
+    margin-left: 5px;
+}
 .mb-125 {
     margin-bottom: 1.25rem;
 }
+.text-gray-500 {
+    color: #878787;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.weight-400 {
+    font-weight: 400;
+}
+
+.border-bottom-gray-600 {
+    border-bottom: 1px solid #424242;
+}
+
 
 /* input, */
 .input:focus,
@@ -23,6 +44,9 @@ body {
     transition: .2s;
     border-color: none;
 }
+.font-size-18,
+h6,
+.page-profile p,
 .text-16,
 .btn-login-email,
 .btnpurle,
@@ -201,15 +225,14 @@ h1,h2,h3,h4,h5,h6,a {
     border-radius: 8px;
 }
 
-
 .bg-grey-800 {
     background-color: #161616;
 }
 
-
 .offcanvas.offcanvas-start {
     width: 280px;
     left: 90px;  
+
 }
 .offcanvas.offcanvas-start h3 {
     color: #fff;
@@ -222,7 +245,6 @@ h1,h2,h3,h4,h5,h6,a {
     margin-top: -20px !important;
     font-size: 13px;
 }
-
 
 .image-grid {
     display: grid;
@@ -267,7 +289,6 @@ h1,h2,h3,h4,h5,h6,a {
     font-weight: 400;
 }
 
-
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
@@ -307,8 +328,6 @@ input[type="range"]::-ms-thumb {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .offcanvas.offcanvas-start h3 {
     margin-bottom: 24px;
 }
@@ -331,17 +350,14 @@ select.form-select option {
     padding: 5px;
 }
 
-
 select.form-select option:hover {
     background-color: #fff !important;
     color: #000;
 }
 
-
 select.form-select option[disabled] {
     display: none;
 }
-
 
 .offcanvas.offcanvas-start h3 {
     margin-bottom: 18px;
@@ -654,8 +670,8 @@ a.btn-icons-log.icons-svg-style {
 }
 
 @media (max-width: 992px) {
-    .page-section {
-        /* position: absolute; */
+    .card-speed-paint {
+        width: auto;
     }
 }
 
@@ -671,6 +687,9 @@ a.btn-icons-log.icons-svg-style {
 
 }
 @media (min-width: 992px) {
+    .card-speed-paint {
+        width: 560px;
+    }
     .page-section h1 {
         font-size: 50px;
     }
@@ -1004,6 +1023,7 @@ form.login {
     align-items: center;
 }
 
+.pop-up-width label,
 .login label {
     opacity: .9;
     color: #E6E6E6;
@@ -1032,6 +1052,7 @@ form.login {
     width: 24px;
     height: 24px;
 }
+.btn-pop-up,
 .btnpurle {    
     color: #BC3CF8;
     /* font-size: 18px; */
@@ -1056,10 +1077,11 @@ button.btnpurle:hover {
     border: 1px solid #ffffff;
     color: #0A0A0A;
 }
+.pop-up-width form input,
 .page-section form input {
     border: 1px solid #FFFFFF14;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 6.5px 16px;
     width: 100%;
 }
 .input:focus-visible,
@@ -1173,3 +1195,127 @@ input:focus-visible {
 .menu-items-icons a:hover .icon-footer {
     fill: #1F1F1F;
 }
+
+/* page profile */
+
+.page-profile{
+    background: #161616;
+}
+
+.card-speed-paint {
+    background-image: url(../image/subscription_bg.png);
+    background-size: 100% 100%;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #2e2e2e;
+    --bs-card-bg: none;
+}
+
+.data-icons img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+.page-profile .remaining p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+.card-speed-paint h6 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.card-speed-paint h1,
+.page-profile h4 {
+    font-family: "Red Hat Display", sans-serif;
+}
+.card-speed-paint h1 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.card-speed-paint h1 span {
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.remaining {
+    background: linear-gradient(90deg, #1F1F1F 0%, #060606 100%);
+    border: 1px solid #2e2e2e;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+.card-speed-paint ul {
+    padding: 0;
+    border-top: 1px solid #ffffff34
+}
+.card-speed-paint li {
+    font-size: 18px;
+    width: 400;
+    list-style: none;
+    margin-top: 16px;
+
+}
+.card-speed-paint li img {
+    width: 20px;
+    height: auto;
+    margin-right: 15px;
+}
+.page-profile h4 {
+    font-size: 28px;
+    font-weight: 700;    
+}
+.btn-pop-up {
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn-pop-up:hover {
+    color: #8024AD;
+}
+.pop-up-width {
+    /* --bs-modal-width: 565px;    */
+    /* --bs-modal-bg: #161616; */
+}
+.modal-header {
+    border-bottom:none;    
+}
+.pop-up-width .modal-content {    
+    border: 1px solid #FFFFFF14;
+    border-radius: 16px;
+    background-color:#161616;
+}
+.modal.fade.show {
+    background: #00000094;
+}
+.pop-up-width .modal-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+.pop-up-width .btn-close {
+    --bs-btn-close-bg:none;
+    --bs-btn-close-opacity:none;
+}
+.pop-up-width .modal-footer {
+    border-top:none;
+}
+.modal-footer button.btnpurle {
+    width: auto;
+    border: 2px solid #BC3CF8;
+}
+.modal-footer button.btnpurle:hover {
+    border: 2px solid #ffffff;
+}
+.btnpurle.close {
+    background: #161616;
+    border: 2px solid #BC3CF8;
+    color: #BC3CF8;
+}
+/* end */
