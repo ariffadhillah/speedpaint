@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6,a {
     background: #0A0A0A;
 }
 .navbar {
-    height: 84px;
+    height: 74px;
     border-bottom:.5px solid #ffffff14;;
 }
 
@@ -95,7 +95,7 @@ h1,h2,h3,h4,h5,h6,a {
 .navbar a.btn-log-in {
     border: 0.5px solid #fff;
     border-radius: 8px;
-    padding: 8px 14px;
+    padding: 7px 18px;
     transition: .5s;
 }
 .navbar a.btn-sign-up {
@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5,h6,a {
     color: #1F1F1F;
     border: 0.5px solid #fff;
     border-radius: 8px;
-    padding: 8px 14px;
+    padding: 7px 18px;
     transition: .5s;
     
 }
@@ -1317,5 +1317,6 @@ input:focus-visible {
     background: #161616;
     border: 2px solid #BC3CF8;
     color: #BC3CF8;
+    transition: .5s;
 }
 /* end */
