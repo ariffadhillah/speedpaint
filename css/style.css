@@ -15,9 +15,7 @@ body {
 .font-size-24 {
     font-size: 24px;
 }
-.font-size-42 {
-    font-size: 42px;
-}
+
 .m-right-10 {
     margin-right: 10px;
 }
@@ -690,6 +688,9 @@ a.btn-icons-log.icons-svg-style {
 }
 
 @media (max-width: 992px) {
+    .font-size-42 {
+        font-size: 34px;
+    }
     .footer-top{
         padding-top: 50px;
         padding-bottom: 50px;
@@ -715,6 +716,9 @@ a.btn-icons-log.icons-svg-style {
 
 }
 @media (min-width: 992px) {
+    .font-size-42 {
+        font-size: 42px;
+    }
     .footer-top{
         padding-top: 95px;
         padding-bottom: 95px;
