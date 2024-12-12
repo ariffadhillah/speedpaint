@@ -3,8 +3,20 @@
 body {
     background-color: #0a0a0a;
 }
+.font-size-14 {
+    font-size: 14px;
+}
+.font-size-16 {
+    font-size: 16px;
+}
 .font-size-18 {
     font-size: 18px;
+}
+.font-size-24 {
+    font-size: 24px;
+}
+.font-size-42 {
+    font-size: 42px;
 }
 .m-right-10 {
     margin-right: 10px;
@@ -21,13 +33,18 @@ body {
 .text-gray-500 {
     color: #878787;
 }
-.weight-600 {
-    font-weight: 600;
-}
 .weight-400 {
     font-weight: 400;
 }
-
+.weight-500 {
+    font-weight: 500;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.weight-700 {
+    font-weight: 700;
+}
 .border-bottom-gray-600 {
     border-bottom: 1px solid #424242;
 }
@@ -61,6 +78,9 @@ h1,h2,h3,h4,h5,h6,a {
     font-family: "Mulish", sans-serif;
 }
 
+.font-red-hat-display {
+    font-family: "Red Hat Display", sans-serif;
+}
 .bg-black-900 {
     background: #1F1F1F;
 }
@@ -716,7 +736,7 @@ a.btn-icons-log.icons-svg-style {
         padding: 14px 29px;
     }
     .card-speed-paint {
-        width: 560px;
+        width: 530px;
     }
     .page-section h1 {
         font-size: 50px;
@@ -1240,7 +1260,7 @@ input:focus-visible {
 }
 
 /* page profile */
-
+.sc
 .page-profile{
     background: #161616;
 }
@@ -1253,17 +1273,16 @@ input:focus-visible {
     border: 1px solid #2e2e2e;
     --bs-card-bg: none;
 }
+.card-speed-paint.yearly {
+    background-image: url(../image/yearly.png);
+    background-size: 100% 100%;
+}
 
 .data-icons img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
     margin-top: -3px;
-}
-.page-profile .remaining p {
-    font-size: 14px;
-    color: #ffffff;
-    margin: 0;
 }
 .card-speed-paint h6 {
     color: #ffffff;
@@ -1301,7 +1320,7 @@ input:focus-visible {
 }
 .card-speed-paint li {
     font-size: 18px;
-    width: 400;
+    font-weight: 400;
     list-style: none;
     margin-top: 16px;
 
@@ -1362,4 +1381,17 @@ input:focus-visible {
     color: #BC3CF8;
     transition: .5s;
 }
+/* end */
+
+/* page subscription */
+.h1 {   
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
 /* end */
