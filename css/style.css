@@ -735,6 +735,9 @@ a.btn-icons-log.icons-svg-style {
     .page-section {
         position: absolute !important;
     }
+    .navbar a.navbar-brand {
+        margin-right: 0;
+    }
 
 }
 @media (min-width: 992px) {
@@ -849,7 +852,7 @@ a.btn-icons-log.icons-svg-style {
     }
     .purple-buttons {
         margin-right: 0;
-        padding: 8px;
+        padding: 7px;
         font-size: 12px;
         font-weight: 600;
     }
