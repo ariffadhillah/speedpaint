@@ -781,16 +781,25 @@ a.btn-icons-log.icons-svg-style {
 .line-height-1-6 {
     line-height: 1.6;
 }
+/* @media (max-width: 1140px) {
+    .mx-width-500 {
+        max-width: 500px;
+    }
+} */
 @media (min-width: 992px) {
     .img-speedpaint-on-canva {
-        width: 510px;
+        width: 520px;
         height: auto;
     }
     .img-how-it-works {
         width: auto;
         height: 263px;
     }
-    .mx-width-580{
+    .img-how-it-works-download {
+        width: 273px;
+        height: 273px;
+    }
+    .mx-width-580 {
         max-width: 580px;
     }
     .mx-width-470 {
@@ -798,6 +807,9 @@ a.btn-icons-log.icons-svg-style {
     }
     .mx-width-320 {
         max-width: 320px;
+    }
+    .mx-width-370 {
+        max-width: 370px;
     }
     
     .mx-width-250 {
@@ -1596,8 +1608,8 @@ img.img-choosefile {
 }
 
 .btn-try {
-    border: 1.5px solid #fff;
-    padding: 12px 16px;
+    border: 1.2px solid #fff;
+    padding: 10px 18px;
     font-size: 18px;
     font-weight: 600;
     transition: .3s;
@@ -1605,4 +1617,7 @@ img.img-choosefile {
 .btn-try:hover {
     /* opacity: .8; */
     background: linear-gradient(102.32deg, #8024ad 10.66%, #630ee1 99.78%);
+}
+.bg-traparent {
+    background: transparent;
 }
