@@ -12,10 +12,19 @@ body {
 .font-size-18 {
     font-size: 18px;
 }
+.font-size-22 {
+    font-size: 22px;
+}
 .font-size-24 {
     font-size: 24px;
 }
+.font-size-40 {
+    font-size: 40px;
+}
 
+.m-right-28 {
+    margin-right: 28px;
+}
 .m-right-10 {
     margin-right: 10px;
 }
@@ -30,6 +39,12 @@ body {
 }
 .text-gray-500 {
     color: #878787;
+}
+.weight-200 {
+    font-weight: 200;
+}
+.weight-300 {
+    font-weight: 300;
 }
 .weight-400 {
     font-weight: 400;
@@ -52,6 +67,20 @@ body {
 .border-radius-16 {
     border-radius: 16px;
 }
+.border-radius-24 {
+    border-radius: 24px;
+}
+.border-radius-32 {
+    border-radius: 32px;
+}
+.border-linear-4 {
+    /* padding: 60px; */
+    border-radius: 25px;
+    border: 1px solid #696969;
+}
+.background-linear-90 {
+      background: linear-gradient(90deg, #1f1f1f, #060606);
+  }
 
 /* input, */
 .input:focus,
@@ -741,11 +770,27 @@ a.btn-icons-log.icons-svg-style {
 
 }
 @media (min-width: 992px) {
+    .img-how-it-works {
+        width: auto;
+        height: 263px;
+    }
+    .mx-width-580{
+        max-width: 580px;
+    }
+    .mx-width-320 {
+        max-width: 320px;
+    }
     .card-speed-paint h1 {
         font-size: 56px;
     }
     .font-size-42 {
         font-size: 42px;
+    }
+    .font-size-48 {
+        font-size: 48px;
+    }
+    .font-size-52 {
+        font-size: 52px;
     }
     .footer-top{
         padding-top: 95px;
@@ -1475,3 +1520,37 @@ input:focus-visible {
 }
 
 /* end */
+
+/* Home page */
+
+.hero-home-page {
+    padding-bottom: 80px;
+    background-image: url(../image/hero_bg-min.jpg);
+    background-size: 100% 100%;    
+}
+
+.color-gradient-purple-2 {
+    background: linear-gradient(90deg,#5f0be7,#b71df6,#5f0be7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.choosefile {
+    background: #FFFFFF14;
+    border: 2px dashed #FFFFFF66;
+    border-radius: 24px;
+    max-width: 525px;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s;
+}
+.choosefile:hover {
+    opacity: .8;
+}
+img.img-choosefile {
+    width: 132px;
+    height: 132px;
+}
+
+/* end */
+
