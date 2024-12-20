@@ -1,150 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Speed Paint</title>
-  <link rel="icon" href="image/favicon.ico" type="image/x-icon" sizes="16x16">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Style CSS -->
-  <style>
-    @media (max-width: 767px) {
-      .carousel-inner .carousel-item > div {
-        display: none;
-      }
-      .carousel-inner .carousel-item > div:first-child {
-        display: block;
-      }
-    }
-
-    .carousel-inner .carousel-item.active,
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-      display: flex;
-    }
-
-    /* Medium screens and up */
-    @media (min-width: 768px) {
-      .carousel-inner .carousel-item-end.active,
-      .carousel-inner .carousel-item-next {
-        transform: translateX(33.333%);
-      }
-
-      .carousel-inner .carousel-item-start.active,
-      .carousel-inner .carousel-item-prev {
-        transform: translateX(-33.333%);
-      }
-
-      .carousel-inner .carousel-item > div {
-        flex: 0 0 33.333%; /* Default width */
-      }
-
-      .carousel-inner .carousel-item.active > div {
-      }
-    }
-
-    .carousel-inner .carousel-item-end,
-    .carousel-inner .carousel-item-start {
-      transform: translateX(0);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-<div class="container text-center my-3">
-  <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
-  <div class="row mx-auto my-auto justify-content-center">
-    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400/31f?text=1" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 1</div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400/e66?text=2" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 2</div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 3</div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400?text=4" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 4</div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400/aba?text=5" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 5</div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-img">
-                <img src="https://via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
-              </div>
-              <div class="card-img-overlay">Slide 6</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </a>
-      <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
+  <style>
+    .home-demo .item {
+    background: #ff3f4d;
+}
+.home-demo h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+.owl-item.active:nth-of-type(1) {
+  width: 25%; /* Item pertama */
+}
+
+.owl-item.active:nth-of-type(2) {
+  width: 50%; /* Item kedua */
+}
+
+.owl-item.active:nth-of-type(3) {
+  width: 25%; /* Item ketiga */
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<div class="home-demo">
+  <h3>Carousel</h3>
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <h2>Swipe</h2>
+    </div>
+    <div class="item">
+      <h2>Drag</h2>
+    </div>
+    <div class="item">
+      <h2>Responsive</h2>
+    </div>
+    <div class="item">
+      <h2>CSS3</h2>
+    </div>
+    <div class="item">
+      <h2>Fast</h2>
+    </div>
+    <div class="item">
+      <h2>Easy</h2>
+    </div>
+    <div class="item">
+      <h2>Free</h2>
+    </div>
+    <div class="item">
+      <h2>Upgradable</h2>
+    </div>
+    <div class="item">
+      <h2>Tons of options</h2>
+    </div>
+    <div class="item">
+      <h2>Infinity</h2>
+    </div>
+    <div class="item">
+      <h2>Auto Width</h2>
     </div>
   </div>
-  <h5 class="mt-2 fw-light">Middle item appears larger</h5>
 </div>
 <script>
-    let items = document.querySelectorAll('.carousel .carousel-item')
-
-items.forEach((el) => {
-  const minPerSlide = 3
-  let next = el.nextElementSibling
-  for (var i=1; i<minPerSlide; i++) {
-      if (!next) {
-          // wrap carousel by using first child
-          next = items[0]
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    nav:true,
+    margin:10,
+    with:300,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },            
+        960:{
+            items:3
+        },
+        1200:{
+            items:3
         }
-      let cloneChild = next.cloneNode(true)
-      el.appendChild(cloneChild.children[0])
-      next = next.nextElementSibling
-  }
-})
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
 
-  </script>
-<script src="js/bootstrap.bundle.min.js"></script>
+</script>
 </body>
 </html>
