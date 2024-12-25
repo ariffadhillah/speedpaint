@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload with Progress Bar</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon" sizes="16x16">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style css -->
+     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <style>
+
+    </style>
+
+
+<div class="container">
+    <div class="row mx-1 pt-3 mb-4 justify-content-center">
+        <div class="col-12 col-xl-6 col-md-6 col-sm-12">
+
+<form class="input-form px-1 px-xl-5 px-lg-5 px-md-4 px-sm-1">
+    <label class="choosefile text-center pt-3 pb-4 text-white" for="fileInput">
+        <figure class="image-preview-container">
+            <div class="img-choosefile">
+                <img src="image/choosefile.png" alt="Choose file placeholder">
+                <span class="d-block mb-2 pt-4 weight-400">Drag & Drop or <u class="weight-600">Choose file</u> to upload</span>
+                <span class="d-block weight-200">JPG or PNG</span>
+            </div>
+            <img id="previewImage" alt="Preview" class="hidden">
+            <span class="checkmark hidden">
+                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M80.6664 40.6268V44.0002C80.6618 51.907 78.1015 59.6006 73.3672 65.9335C68.633 72.2664 61.9784 76.8993 54.396 79.1411C46.8136 81.383 38.7096 81.1138 31.2927 78.3736C23.8758 75.6335 17.5434 70.5692 13.2399 63.9361C8.93632 57.303 6.89224 49.4564 7.41249 41.5666C7.93274 33.6769 10.9894 26.1667 16.1267 20.1561C21.264 14.1455 28.2066 9.95656 35.919 8.21402C43.6315 6.47149 51.7007 7.26872 58.923 10.4868" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M80.6667 14.6665L44 51.3698L33 40.3698" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </figure>
+        <span class="progress-bar-container hidden mt-4">
+            <b class="progress-bar"></b>
+        </span>
+    </label>
+    <input type="file" class="form-control d-none" id="fileInput" accept="image/png, image/jpeg" required>
+</form>
+
+    </div>
+</div>
+</div>
+
+<script>
+    const fileInput = document.getElementById("fileInput");
+    const progressBar = document.querySelector(".progress-bar");
+    const progressBarContainer = document.querySelector(".progress-bar-container");
+    const previewImage = document.getElementById("previewImage");
+    const checkmark = document.querySelector(".checkmark");
+    const imgChooseFile = document.querySelector(".img-choosefile"); 
+    const hiddenTextElements = document.querySelectorAll(".hidden-text"); // Pilih semua elemen dengan kelas "hidden-text"
+
+    fileInput.addEventListener("change", () => {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImage.src = e.target.result;
+                previewImage.style.display = "block";
+                imgChooseFile.style.display = "none";
+            };
+            reader.readAsDataURL(file);
+
+            // Sembunyikan elemen dengan kelas "hidden-text"
+            hiddenTextElements.forEach((element) => {
+                element.style.display = "none";
+            });
+
+            progressBarContainer.style.display = "block";
+            simulateUpload();
+        }
+    });
+
+    function simulateUpload() {
+        let progress = 0;
+
+        progressBar.style.width = "0%";
+        checkmark.style.display = "none";
+
+        const interval = setInterval(() => {
+            progress += 10;
+            progressBar.style.width = progress + "%";
+
+            if (progress >= 100) {
+                clearInterval(interval);
+                checkmark.style.display = "block"; 
+            }
+        }, 300); 
+    }
+</script>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/style.js"></script>
+
+</body>
+</html>
