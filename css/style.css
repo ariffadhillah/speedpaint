@@ -36,6 +36,9 @@ body {
 .m-right-10 {
     margin-right: 10px;
 }
+.m-right-16 {
+    margin-right: 16px;
+}
 .m-right-20 {
     margin-right: 20px;
 }
@@ -321,6 +324,7 @@ h1,h2,h3,h4,h5,h6,a {
 .offcanvas.offcanvas-start {
     width: 280px;
     left: 90px;  
+    transform:none;
 
 }
 .offcanvas.offcanvas-start h3 {
@@ -776,7 +780,7 @@ a.btn-icons-log.icons-svg-style {
     border: 12px solid #000;
 }
 .post-blog-article .menu-items-icons a {
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: 8px;
     transition: .5s;
     background: #060606;
@@ -1484,7 +1488,7 @@ input:focus-visible {
 }
 
 /* page profile */
-.sc
+/* .sc */
 .page-profile{
     background: #161616;
 }
@@ -1875,7 +1879,7 @@ u.color-gray-500 {
 .checkmark {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 93%;
     transform: translate(-50%, -50%);
 }
 

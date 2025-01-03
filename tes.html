@@ -1,104 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Upload with Progress Bar</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speed Paint</title>
     <link rel="icon" href="image/favicon.ico" type="image/x-icon" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Style css -->
      <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-</head>
-<body>
-    <style>
+    <!-- End -->
 
-    </style>
+  </head>
+  <body>
 
+    <nav class="navbar bg-black-900 border-bottom-gray-600-5 navbar-expand-lg px-lg-4 px-sm-2 fixed z-2">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#"><img src="image/logo.png" alt=""></a>
+          <div class="navbar-items d-flex align-items-center">
+            <a class="" href="#">blog</a>
+            <a class="btn-log-in" href="login.html">Log in</a>
+            <a class="btn-sign-up" href="#">Sign Up</a>
+          </div>
+        </div>
+      </nav>
 
-<div class="container">
-    <div class="row mx-1 pt-3 mb-4 justify-content-center">
-        <div class="col-12 col-xl-6 col-md-6 col-sm-12">
+      <section class="layout layout-container z-0">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="side-menu bg-black-900 mt-0">
+            <a href="#" class="sidebar-item mt-2" data-bs-target="#offcanvasHandStyles">
+                <span class="menu-text d-block">Hand Styles</span>
+            </a>
+            <a href="#" class="sidebar-item mt-2" data-bs-target="#offcanvasBasicOptions">
+                <span class="menu-text d-block">Basic Options</span>
+            </a>
+            <a href="#" class="sidebar-item mt-2" data-bs-target="#offcanvasAdvancedOptions">
+                <span class="menu-text d-block">Advanced Options</span>
+            </a>
+            <a href="#" class="sidebar-item mt-2" data-bs-target="#offcanvasCustomSequence">
+                <span class="menu-text d-block">Custom Sequence</span>
+            </a>
+        </nav>
+        
+        
+ 
+    </section>
 
-<form class="input-form px-1 px-xl-5 px-lg-5 px-md-4 px-sm-1">
-    <label class="choosefile text-center pt-3 pb-4 text-white" for="fileInput">
-        <figure class="image-preview-container">
-            <div class="img-choosefile">
-                <img src="image/choosefile.png" alt="Choose file placeholder">
-                <span class="d-block mb-2 pt-4 weight-400">Drag & Drop or <u class="weight-600">Choose file</u> to upload</span>
-                <span class="d-block weight-200">JPG or PNG</span>
-            </div>
-            <img id="previewImage" alt="Preview" class="hidden">
-            <span class="checkmark hidden">
-                <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M80.6664 40.6268V44.0002C80.6618 51.907 78.1015 59.6006 73.3672 65.9335C68.633 72.2664 61.9784 76.8993 54.396 79.1411C46.8136 81.383 38.7096 81.1138 31.2927 78.3736C23.8758 75.6335 17.5434 70.5692 13.2399 63.9361C8.93632 57.303 6.89224 49.4564 7.41249 41.5666C7.93274 33.6769 10.9894 26.1667 16.1267 20.1561C21.264 14.1455 28.2066 9.95656 35.919 8.21402C43.6315 6.47149 51.7007 7.26872 58.923 10.4868" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M80.6667 14.6665L44 51.3698L33 40.3698" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-        </figure>
-        <span class="progress-bar-container hidden mt-4">
-            <b class="progress-bar"></b>
-        </span>
-    </label>
-    <input type="file" class="form-control d-none" id="fileInput" accept="image/png, image/jpeg" required>
-</form>
-
-    </div>
-</div>
-</div>
-
+    <div id="offcanvasHandStyles" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
+        <div class="offcanvas-body">
+          <h3>Hand Styles</h3>
+          <button type="button" class="btn-close btn-close-white"`></button>
+        </div>
+      </div>
+      <div id="offcanvasBasicOptions" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
+        <div class="offcanvas-body">
+          <h3>Basic Options</h3>
+          <button type="button" class="btn-close btn-close-white"`></button>
+        </div>
+      </div>
+      <div id="offcanvasAdvancedOptions" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
+        <div class="offcanvas-body">
+          <h3>Advanced Options</h3>
+          <button type="button" class="btn-close btn-close-white"`></button>
+        </div>
+      </div>
+      <div id="offcanvasCustomSequence" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
+        <div class="offcanvas-body">
+          <h3>Custom Sequence</h3>
+          <button type="button" class="btn-close btn-close-white"`></button>
+        </div>
+      </div>
+      
 <script>
-    const fileInput = document.getElementById("fileInput");
-    const progressBar = document.querySelector(".progress-bar");
-    const progressBarContainer = document.querySelector(".progress-bar-container");
-    const previewImage = document.getElementById("previewImage");
-    const checkmark = document.querySelector(".checkmark");
-    const imgChooseFile = document.querySelector(".img-choosefile"); 
-    const hiddenTextElements = document.querySelectorAll(".hidden-text"); // Pilih semua elemen dengan kelas "hidden-text"
+    
+// // Sidebar
+document.addEventListener('DOMContentLoaded', () => {
+    const initializeSidebar = (options) => {
+        
+        const sidebarSelector = options.sidebarSelector || '.sidebar-item';
+        const mainContentSelector = options.mainContentSelector || '.main-content';
+        const closeButtonSelector = options.closeButtonSelector || '.btn-close';
 
-    fileInput.addEventListener("change", () => {
-        const file = fileInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                previewImage.src = e.target.result;
-                previewImage.style.display = "block";
-                imgChooseFile.style.display = "none";
-            };
-            reader.readAsDataURL(file);
+        const sidebarLinks = document.querySelectorAll(sidebarSelector);
+        const mainContent = document.querySelector(mainContentSelector);
+        const closeButtons = document.querySelectorAll(closeButtonSelector);
 
-            // Sembunyikan elemen dengan kelas "hidden-text"
-            hiddenTextElements.forEach((element) => {
-                element.style.display = "none";
+        const deactivateSidebarLinks = () => {
+            sidebarLinks.forEach(link => link.classList.remove('active'));
+        };
+
+        const addSidebarLinkListeners = () => {
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    deactivateSidebarLinks(); 
+                    link.classList.add('active'); 
+                    if (mainContent) mainContent.classList.add('expanded'); 
+                });
             });
+        };
 
-            progressBarContainer.style.display = "block";
-            simulateUpload();
-        }
+        const addCloseButtonListeners = () => {
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    deactivateSidebarLinks(); 
+                    if (mainContent) mainContent.classList.remove('expanded');
+                });
+            });
+        };
+
+        addSidebarLinkListeners();
+        addCloseButtonListeners();
+    };
+
+    initializeSidebar({
+        sidebarSelector: '.sidebar-item',
+        mainContentSelector: '.main-content',
+        closeButtonSelector: '.btn-close'
     });
+});
 
-    function simulateUpload() {
-        let progress = 0;
 
-        progressBar.style.width = "0%";
-        checkmark.style.display = "none";
-
-        const interval = setInterval(() => {
-            progress += 10;
-            progressBar.style.width = progress + "%";
-
-            if (progress >= 100) {
-                clearInterval(interval);
-                checkmark.style.display = "block"; 
-            }
-        }, 300); 
-    }
 </script>
 
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/style.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/style.js"></script>
 
-</body>
+
+
+  </body>
 </html>
