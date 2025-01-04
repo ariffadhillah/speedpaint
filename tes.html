@@ -49,80 +49,29 @@
     <div id="offcanvasHandStyles" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
         <div class="offcanvas-body">
           <h3>Hand Styles</h3>
-          <button type="button" class="btn-close btn-close-white"`></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
       </div>
       <div id="offcanvasBasicOptions" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
         <div class="offcanvas-body">
           <h3>Basic Options</h3>
-          <button type="button" class="btn-close btn-close-white"`></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
       </div>
       <div id="offcanvasAdvancedOptions" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
         <div class="offcanvas-body">
           <h3>Advanced Options</h3>
-          <button type="button" class="btn-close btn-close-white"`></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
       </div>
       <div id="offcanvasCustomSequence" class="offcanvas offcanvas-start bg-grey-800" tabindex="-1">
         <div class="offcanvas-body">
           <h3>Custom Sequence</h3>
-          <button type="button" class="btn-close btn-close-white"`></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
       </div>
       
-<script>
-    
-// // Sidebar
-document.addEventListener('DOMContentLoaded', () => {
-    const initializeSidebar = (options) => {
-        
-        const sidebarSelector = options.sidebarSelector || '.sidebar-item';
-        const mainContentSelector = options.mainContentSelector || '.main-content';
-        const closeButtonSelector = options.closeButtonSelector || '.btn-close';
-
-        const sidebarLinks = document.querySelectorAll(sidebarSelector);
-        const mainContent = document.querySelector(mainContentSelector);
-        const closeButtons = document.querySelectorAll(closeButtonSelector);
-
-        const deactivateSidebarLinks = () => {
-            sidebarLinks.forEach(link => link.classList.remove('active'));
-        };
-
-        const addSidebarLinkListeners = () => {
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault(); 
-                    deactivateSidebarLinks(); 
-                    link.classList.add('active'); 
-                    if (mainContent) mainContent.classList.add('expanded'); 
-                });
-            });
-        };
-
-        const addCloseButtonListeners = () => {
-            closeButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    deactivateSidebarLinks(); 
-                    if (mainContent) mainContent.classList.remove('expanded');
-                });
-            });
-        };
-
-        addSidebarLinkListeners();
-        addCloseButtonListeners();
-    };
-
-    initializeSidebar({
-        sidebarSelector: '.sidebar-item',
-        mainContentSelector: '.main-content',
-        closeButtonSelector: '.btn-close'
-    });
-});
-
-
-</script>
-
+      
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/style.js"></script>

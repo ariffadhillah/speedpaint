@@ -83,23 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const hideAllOffcanvas = () => {
             offcanvasElements.forEach(offcanvas => {
                 offcanvas.classList.remove('show');
-                offcanvas.style.visibility = 'hidden'; // Sembunyikan elemen
+                offcanvas.style.visibility = 'hidden'; 
             });
         };
 
         const showDefaultOffcanvas = () => {
             const defaultOffcanvas = document.getElementById(defaultOffcanvasId);
             if (defaultOffcanvas) {
-                defaultOffcanvas.classList.add('show'); // Tampilkan elemen default
-                defaultOffcanvas.style.visibility = 'visible'; // Set visibility menjadi terlihat
+                defaultOffcanvas.classList.add('show'); 
+                defaultOffcanvas.style.visibility = 'visible'; 
 
-                // Tambahkan class active ke link sidebar terkait
+                
                 const defaultLink = document.querySelector(`[data-bs-target="#${defaultOffcanvasId}"]`);
                 if (defaultLink) {
                     defaultLink.classList.add('active');
                 }
 
-                // Geser main-content ke samping
+                
                 if (mainContent) {
                     mainContent.classList.add('expanded');
                 }
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
 
                     if (link.classList.contains('active')) {
-                        console.log('Link sudah aktif. Tidak ada tindakan.');
+                        // console.log('Link sudah aktif. Tidak ada tindakan.');
                         return;
                     }
 
@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        hideAllOffcanvas(); // Sembunyikan semua offcanvas terlebih dahulu
-        showDefaultOffcanvas(); // Tampilkan offcanvas default
+        hideAllOffcanvas(); 
+        showDefaultOffcanvas(); 
         addSidebarLinkListeners();
         addCloseButtonListeners();
     };
