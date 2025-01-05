@@ -1938,3 +1938,36 @@ u.color-gray-500 {
 .subscription .fade {
     transition: 0;
 }
+
+ul.nav-pills {
+    background: #2f203f;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+
+button.nav-link:hover,
+button.nav-link,
+button.nav-link.active {
+    border-radius: 40px;
+    color: #fff;
+}
+.nav-pills .nav-link.active {
+    background: linear-gradient(90deg, #1F1F1F 0%, #060606 100%);
+    /* border: 1px solid #2e2e2e; */
+    /* padding: 10px 14px; */
+    /* border-radius: 8px; */
+    border-radius: 40px;
+}
+.nav-pills .show>.nav-link {
+    border-radius: 40px;
+    transition: .5s;    
+    
+}
+.nav-pills .nav-link{
+    border-radius: 40px;    
+}
+
+.nav-link:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
