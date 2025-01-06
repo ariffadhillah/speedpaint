@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// // sidebar new
+// // sidebar 
 document.addEventListener('DOMContentLoaded', () => {
     const initializeSidebar = (options) => {
         const sidebarSelector = options.sidebarSelector || '.sidebar-item';
@@ -164,158 +164,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// // sidebar
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const initializeSidebar = (options) => {
-//         const sidebarSelector = options.sidebarSelector || '.sidebar-item';
-//         const offcanvasSelector = options.offcanvasSelector || '.offcanvas';
-//         const mainContentSelector = options.mainContentSelector || '.main-content';
-
-//         const sidebarLinks = document.querySelectorAll(sidebarSelector);
-//         const offcanvasElements = document.querySelectorAll(offcanvasSelector);
-//         const mainContent = document.querySelector(mainContentSelector);
-
-//         const deactivateSidebarLinks = () => {
-//             sidebarLinks.forEach(link => link.classList.remove('active'));
-//         };
-
-//         const hideAllOffcanvas = () => {
-//             offcanvasElements.forEach(offcanvas => {
-//                 offcanvas.classList.remove('show');
-//                 offcanvas.style.visibility = 'hidden'; // Set visibility to hidden
-//             });
-//         };
-
-//         const addSidebarLinkListeners = () => {
-//             sidebarLinks.forEach(link => {
-//                 link.addEventListener('click', (e) => {
-//                     e.preventDefault();
-
-//                     // Jika link sudah aktif, jangan lakukan apa-apa
-//                     if (link.classList.contains('active')) {
-//                         console.log('Link sudah aktif. Tidak ada tindakan.');
-//                         return;
-//                     }
-
-//                     deactivateSidebarLinks(); // Nonaktifkan semua link sidebar
-//                     hideAllOffcanvas(); // Sembunyikan semua elemen offcanvas
-
-//                     link.classList.add('active'); // Aktifkan link yang diklik
-
-//                     // Tampilkan elemen offcanvas terkait
-//                     const targetSelector = link.getAttribute('data-bs-target');
-//                     if (targetSelector) {
-//                         const targetElement = document.querySelector(targetSelector);
-//                         if (targetElement) {
-//                             targetElement.classList.add('show');
-//                             targetElement.style.visibility = 'visible'; // Set visibility to visible
-//                         }
-//                     }
-
-//                     // Perluas main content (jika ada)
-//                     if (mainContent) mainContent.classList.add('expanded');
-//                 });
-//             });
-//         };
-
-//         const addCloseButtonListeners = () => {
-//             offcanvasElements.forEach(offcanvas => {
-//                 const closeButton = offcanvas.querySelector('.btn-close');
-//                 if (closeButton) {
-//                     closeButton.addEventListener('click', () => {
-//                         deactivateSidebarLinks(); // Nonaktifkan semua link
-//                         offcanvas.classList.remove('show'); // Tutup offcanvas
-//                         offcanvas.style.visibility = 'hidden'; // Sembunyikan elemen
-//                         if (mainContent) mainContent.classList.remove('expanded'); // Persempit main content
-//                     });
-//                 }
-//             });
-//         };
-
-//         addSidebarLinkListeners();
-//         addCloseButtonListeners();
-//     };
-
-//     initializeSidebar({
-//         sidebarSelector: '.sidebar-item',
-//         offcanvasSelector: '.offcanvas',
-//         mainContentSelector: '.main-content'
-//     });
-// });
-
-
-
-
-
-// // Sidebar
-// document.addEventListener('DOMContentLoaded', () => {
-//     const initializeSidebar = (options) => {
-        
-//         const sidebarSelector = options.sidebarSelector || '.sidebar-item';
-//         const mainContentSelector = options.mainContentSelector || '.main-content';
-//         const closeButtonSelector = options.closeButtonSelector || '.btn-close';
-
-//         const sidebarLinks = document.querySelectorAll(sidebarSelector);
-//         const mainContent = document.querySelector(mainContentSelector);
-//         const closeButtons = document.querySelectorAll(closeButtonSelector);
-
-//         const deactivateSidebarLinks = () => {
-//             sidebarLinks.forEach(link => link.classList.remove('active'));
-//         };
-
-//         const addSidebarLinkListeners = () => {
-//             sidebarLinks.forEach(link => {
-//                 link.addEventListener('click', (e) => {
-//                     e.preventDefault(); 
-//                     deactivateSidebarLinks(); 
-//                     link.classList.add('active'); 
-//                     if (mainContent) mainContent.classList.add('expanded'); 
-//                 });
-//             });
-//         };
-
-//         const addCloseButtonListeners = () => {
-//             closeButtons.forEach(button => {
-//                 button.addEventListener('click', () => {
-//                     deactivateSidebarLinks(); 
-//                     if (mainContent) mainContent.classList.remove('expanded');
-//                 });
-//             });
-//         };
-
-//         addSidebarLinkListeners();
-//         addCloseButtonListeners();
-//     };
-
-//     initializeSidebar({
-//         sidebarSelector: '.sidebar-item',
-//         mainContentSelector: '.main-content',
-//         closeButtonSelector: '.btn-close'
-//     });
-// });
-
-
-
 //  slider input/range
 
-function updateSlider(slider, initialValue) {
+function updateSlider(slider, inputId) {
     const value = slider.value;
     const max = slider.max;
     const percentage = (value / max) * 100;
 
     slider.style.background = `linear-gradient(to right, #424242 ${percentage}%, #1f1f1f ${percentage}%)`;
 
-    if (slider.value == initialValue) {
-        slider.style.background = `linear-gradient(to right, #424242 ${initialValue}%, #1f1f1f ${initialValue}%)`;
+
+    const associatedInput = document.getElementById(inputId);
+    if (associatedInput) {
+        associatedInput.value = value;
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    updateSlider(document.getElementById("slider1"), 28);
-    updateSlider(document.getElementById("slider2"), 45);
-    updateSlider(document.getElementById("slider3"), 35);
+    updateSlider(document.getElementById("slider1"), 'input1');
+    updateSlider(document.getElementById("slider2"), 'input2');
+    updateSlider(document.getElementById("slider3"), 'input3');
 });
-
-
 
